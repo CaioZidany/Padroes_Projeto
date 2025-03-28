@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
@@ -83,6 +82,8 @@ public class InterfaceUsuario {
             int indice = scanner.nextInt() - 1;
             gerenciador.concluirTarefa(indice);
             System.out.println("Tarefa marcada como concluída!");
+        } catch (IllegalStateException e) {
+            System.out.println(e.getMessage());
         } catch (IndexOutOfBoundsException | InputMismatchException e) {
             System.out.println("Número inválido!");
             scanner.nextLine();

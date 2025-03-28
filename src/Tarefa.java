@@ -9,7 +9,11 @@ public class Tarefa implements ITarefa {
 
     @Override
     public void marcarConcluida() {
-        this.concluida = true;
+        if (!concluida) {
+            this.concluida = true;
+        } else {
+            throw new IllegalStateException("Tarefa já está marcada como concluída!");
+        }
     }
 
     @Override
