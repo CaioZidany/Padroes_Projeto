@@ -11,8 +11,10 @@ public class Tarefa implements ITarefa {
     public void marcarConcluida() {
         if (!concluida) {
             this.concluida = true;
+            System.out.println("Tarefa marcada!");
         } else {
-            throw new IllegalStateException("Tarefa já está marcada como concluída!");
+            this.concluida = false;
+            System.out.println("Tarefa desmarcada!");
         }
     }
 

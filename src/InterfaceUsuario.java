@@ -16,7 +16,7 @@ public class InterfaceUsuario {
             System.out.println("\nGerenciador de Tarefas");
             System.out.println("1. Adicionar tarefa");
             System.out.println("2. Remover tarefa");
-            System.out.println("3. Marcar tarefa como concluída");
+            System.out.println("3. Marcar/Desmarcar tarefa como concluída");
             System.out.println("4. Listar tarefas");
             System.out.println("5. Sair");
             System.out.print("Escolha uma opção: ");
@@ -81,7 +81,6 @@ public class InterfaceUsuario {
         try {
             int indice = scanner.nextInt() - 1;
             gerenciador.concluirTarefa(indice);
-            System.out.println("Tarefa marcada como concluída!");
         } catch (IllegalStateException e) {
             System.out.println(e.getMessage());
         } catch (IndexOutOfBoundsException | InputMismatchException e) {
